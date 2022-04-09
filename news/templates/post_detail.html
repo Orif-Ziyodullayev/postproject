@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='post-entry'>
+    <h5>{{post.date}}</h5>
+    <h3>{{post.title}}</h3>
+    <img src="{{post.image}}">       
+    <h4>{{post.info}}</h4>
+    
+    <h5>Muallif : {{post.author}}</h5>
+</div>
+<div>
+<a href="{% url 'post_update' post.pk %}" button type="button" class="btn btn-info">Postni tahrirlash</button></a>
+<a href="{% url 'post_delete' post.pk %}" button type="button" class="btn btn-danger">Postni o'chirish</button></a>
+</div>
+{% endblock content %}

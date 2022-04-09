@@ -1,0 +1,15 @@
+h2 a{
+    color: green;
+}
+h1 a{
+    color:goldenrod;
+}
+body{
+    background-image: url(2.jpg);
+    background-size: 100%;
+    }
+
+div{
+vertical-align: middle;
+text-align: center;
+}

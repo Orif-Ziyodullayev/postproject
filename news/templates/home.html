@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Yangiliklar</title>
+        
+    </head>
+<body>
+    <h1>Yangiliklar</h1>
+    {% block content %}
+    <div class ="post-entry">
+    
+            {% for post in object_list %}
+        
+            <h2>
+                <a href='{% url "post_detail" post.pk %}'>
+                    {{post.title}}
+                </a>
+            </h2>
+        <h3>
+            {{post.subtitle}}
+        </h3>
+        
+        
+            {% endfor %}
+            {% endblock content %}
+    
+</div>
+</body>
+</html>
